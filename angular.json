@@ -98,8 +98,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "ReservasCepeac:build:production",
+            "firebaseProject": "reservas-pwa",
+            "firebaseHostingSite": "cepeac"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

@@ -1,0 +1,40 @@
+<app-pantalla-de-carga></app-pantalla-de-carga>
+<div class="container text-center text-light rounded fadeInDown">
+    <div class="alert alert-warning" role="alert">
+        <p class="h5">Este evento tiene localidades limitadas</p>
+    </div>
+    <div class="caja">
+        <p class="h4">{{title}}</p>
+        <img src="./assets/titulo-min.png" class="fadeIn first" alt="">
+        <p>2da. Edición</p>
+        <p>{{descripcion}}</p>
+        <p>{{fecha}}</p>
+        <a href="/teatrointimo/programa" class="link-light">Ver programa de la función</a>
+    </div>
+    <div class="alert alert-danger"
+        *ngIf="formReserva.get('nombre')?.touched && formReserva.get('nombre')?.errors?.['required']">
+        <p>Falta ingresar un nombre</p>
+    </div>
+    <div class="alert alert-danger"
+        *ngIf="formReserva.get('email')?.touched && formReserva.get('email')?.errors?.['required'] && formReserva.get('email')?.errors">
+        <p>El email no es valido</p>
+    </div>
+    <p class="h5">Reserva tu entrada</p>
+
+    <form [formGroup]="formReserva" class="form fadeIn first" (ngSubmit)="enviar()">
+        <input class="form-control" type="text" formControlName="nombre" placeholder="Nombre">
+        <input class="form-control" type="text" formControlName="email" placeholder="Ingrese su Email">
+        <Label>¿Cuanto lugares deseas reservar?</Label>
+        <select class="form-select" formControlName="cantidad" aria-label="Default select example">
+            <option selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <button class="btn btn-dark border border-dark border-2 fadeIn first" type="submit"
+            [disabled]="formReserva.invalid">Reservar</button>
+    </form>
+    <div class="imagen">
+        <img src="./assets/logo la terraza-min.png" alt="Logo de la Terraza" class="fadeIn first">
+    </div>
+</div>

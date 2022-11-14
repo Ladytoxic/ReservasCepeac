@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "reservas-pwa"
+  },
+  "targets": {
+    "reservas-pwa": {
+      "hosting": {
+        "ReservasCepeac": [
+          "cepeac"
+        ]
+      }
+    }
+  }
+}
