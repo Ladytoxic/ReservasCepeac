@@ -1,9 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 0.5em;
-    background-color: rgba(70, 70, 70, 0.733);
+    background-color: rgba(0, 0, 0, 0.945);
+    padding: 1rem;
+    margin-top: 0.30rem;
+    margin-bottom: 1.5rem;
+    height: 100%;
+    width: 50%;
+    padding: 2rem;
+}
+
+input {
+    margin-bottom: 1rem;
+}
+
+button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.caja {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+img {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+@media (max-width:700px) {
+    .container {
+        width: 100%;
+    }    
+    .caja {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+    }
+    img {
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+    }
 }

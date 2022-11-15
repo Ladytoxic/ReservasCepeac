@@ -15,6 +15,10 @@ import { InterceptorInterceptor } from './componente/pantalla-de-carga/intercept
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouserComponent } from './componente/carouser/carouser.component';
+import { CartelneonComponent } from './componente/cartelneon/cartelneon.component';
+import { CartelneonsubtComponent } from './componente/cartelneonsubt/cartelneonsubt.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { ToastrModule } from 'ngx-toastr';
     ReservarComponent,
     InfoComponent,
     FooterComponent,
-    PantallaDeCargaComponent
+    PantallaDeCargaComponent,
+    CarouserComponent,
+    CartelneonComponent,
+    CartelneonsubtComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +38,7 @@ import { ToastrModule } from 'ngx-toastr';
     FormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
+    BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
