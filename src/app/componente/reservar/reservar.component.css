@@ -8,11 +8,11 @@
     align-items: center;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.945);
-    padding: 1rem;
-    margin-top: 0.30rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
     height: 100%;
     width: 50%;
-    padding: 2rem;
 }
 
 input {
@@ -34,8 +34,9 @@ img {
     margin-bottom: 1rem;
 }
 @media (max-width:700px) {
-    .container, .container2 {
+    .container {
         width: 100%;
+        margin-top: 0;
     }    
     .caja {
         margin-top: 1rem;

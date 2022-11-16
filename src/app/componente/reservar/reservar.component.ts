@@ -14,8 +14,8 @@ import { CargaService } from '../pantalla-de-carga/carga.service';
 export class ReservarComponent implements OnInit {
   title = 'VARIETÉ x el Profesorado';
   descripcion = "Domingo 27 de Noviembre; en el marco de medidas de lucha contra los recortes educativos y el intento de transformar nuestro profesorado en un ciclo cerrado, varieteamos y nos organizamos en defensa de la educación pública.";
-  fecha = "Domingo 27 de Noviembre - 20hs: Cena | 21hs: Show"
-  hora = "20hs: Cena | 21hs: Show";
+  fecha = "Domingo 27 de Noviembre - 20hs: Cena | 20:30hs: Show"
+  hora = "20hs: Cena | 20:30hs: Show";
   formReserva!: FormGroup;
   resp: any;
   constructor(
@@ -44,7 +44,7 @@ export class ReservarComponent implements OnInit {
           email: this.formReserva.value.email,
           asunto: 'Hola ' + this.formReserva.value.nombre + '! "Tu Reserva ha sido realiza Correctamente"',
           html: `
-              <div> 
+              <div>
               <h1>Hola 👋 ${this.formReserva.value.nombre}!</h1>
               <h2>Tu reserva ha sido realizada correctamente</h2><hr>
               <p><b>Id:</b> ${data.id}</p>

@@ -14,7 +14,7 @@ export class InfoComponent implements OnInit {
   title = 'VARIETÉ x el Profesorado';
   descripcion = "Domingo 27 de Noviembre; en el marco de medidas de lucha contra los recortes educativos y el intento de transformar nuestro profesorado en un ciclo cerrado, varieteamos y nos organizamos en defensa de la educación pública.";
   fecha = "Domingo 27 de Noviembre";
-  hora = "20hs: Cena | 21hs: Show"
+  hora = "20hs: Cena | 20:30hs: Show"
   direccion = "Av. Alte. Brown 3589 - (Temperley)."
   reserva: any = [];
   id: any;
