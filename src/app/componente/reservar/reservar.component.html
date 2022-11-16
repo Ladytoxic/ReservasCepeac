@@ -1,11 +1,11 @@
 <app-pantalla-de-carga></app-pantalla-de-carga>
-<div class="container text-center text-light rounded fadeInDown">
+<div class="container text-center text-light rounded fadeIn">
     <div class="caja fadeIn first">
         <app-cartelneon></app-cartelneon>
         <app-cartelneonsubt></app-cartelneonsubt>
-        <img src="./assets/OTROMUNDO LOGO.png" width="150px" class="fadeIn first">
+        <img src="./assets/OTROMUNDO LOGO.png" width="150px" class="fadeIn">
+        <p>Alte. Brown 3589 - Temperley</p>
         <p>{{descripcion}}</p>
-        <p>{{fecha}}</p>
         <p>{{hora}}</p>
     </div>
     <div class="alert alert-danger fadeIn first"
@@ -20,6 +20,7 @@
     <form [formGroup]="formReserva" class="form fadeIn first" (ngSubmit)="enviar()">
         <input class="form-control" type="text" formControlName="nombre" placeholder="Nombre">
         <input class="form-control" type="text" formControlName="email" placeholder="Ingrese su Email">
+        <input class="form-control" type="text" formControlName="telefono" placeholder="Teléfono (Opcional)">
         <Label>¿Cuanto lugares deseas reservar?</Label>
         <select class="form-select" formControlName="cantidad" aria-label="Default select example">
             <option selected>1</option>
@@ -31,7 +32,8 @@
         <button class="btn btn-dark btn-lg border border-dark border-2 fadeIn first" type="submit"
             [disabled]="formReserva.invalid">Reservar</button>
     </form>
-    <div class="imagen">
-        <!-- <img src="./assets/icons/"class="fadeIn first"> -->
-    </div>
+</div><br>
+<div class="container rounded fadeIn" style="padding: 0;">
+    <app-footer></app-footer>
+    <img src="./assets/banenr.jpg" class="img-fluid">
 </div>

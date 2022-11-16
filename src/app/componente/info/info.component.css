@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.945);
+    padding: 1rem;
+    margin-top: 0.30rem;
+    width: 50%;
+    padding: 2rem;
+}
+
+img {
+    margin-bottom: 1em;
+}
+
+.respuesta {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.res {
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+h1 {
+    font-family: 'Sacramento', cursive;
+}
+@media (max-width:700px) {
+    .container, .container2 {
+        width: 100%;
+    }    
+    .caja {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+    }
+    img {
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+    }
+}

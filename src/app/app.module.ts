@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouserComponent } from './componente/carouser/carouser.component';
 import { CartelneonComponent } from './componente/cartelneon/cartelneon.component';
 import { CartelneonsubtComponent } from './componente/cartelneonsubt/cartelneonsubt.component';
+import { CartelComponent } from './componente/info/cartel/cartel.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CartelneonsubtComponent } from './componente/cartelneonsubt/cartelneons
     PantallaDeCargaComponent,
     CarouserComponent,
     CartelneonComponent,
-    CartelneonsubtComponent
+    CartelneonsubtComponent,
+    CartelComponent
   ],
   imports: [
     BrowserModule,

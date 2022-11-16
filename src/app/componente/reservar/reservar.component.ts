@@ -14,8 +14,8 @@ import { CargaService } from '../pantalla-de-carga/carga.service';
 export class ReservarComponent implements OnInit {
   title = 'VARIETÉ x el Profesorado';
   descripcion = "Domingo 27 de Noviembre; en el marco de medidas de lucha contra los recortes educativos y el intento de transformar nuestro profesorado en un ciclo cerrado, varieteamos y nos organizamos en defensa de la educación pública.";
-  fecha = "20:00 hs: Cena";
-  hora = "21:00 hs: Show"
+  fecha = "Domingo 27 de Noviembre - 20hs: Cena | 21hs: Show"
+  hora = "20:00 hs: Cena | 21:00 hs: Show";
   formReserva!: FormGroup;
   resp: any;
   constructor(
@@ -30,6 +30,7 @@ export class ReservarComponent implements OnInit {
     this.formReserva = this.FormBuilder.group({
       nombre: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
+      telefono: [''],
       cantidad: ['1'],
       fechaCreacion: new Date
     });
@@ -46,7 +47,7 @@ export class ReservarComponent implements OnInit {
               <div> 
               <h1>Hola 👋 ${this.formReserva.value.nombre}!</h1>
               <h2>Tu reserva ha sido realizada correctamente</h2><hr>
-              <p><b>ID de reserva:</b> ${data.id}</p>
+              <p><b>ID:</b> ${data.id}</p>
               <p><b>Nombre:</b> ${this.formReserva.value.nombre}</p>
               <p><b>Cantidad:</b> ${this.formReserva.value.cantidad}</p><br>
               <p>En caso de no poder ir puedes cancelar tu reserva haciendo click en este enlace </p>
@@ -55,10 +56,11 @@ export class ReservarComponent implements OnInit {
               <p>Te esperamos el día ${this.fecha}</p>
               <p><b>OTRO MUNDO (TEATRO- BAR)</b></p>
               <p>(Av. Alte. Brown 3589 - Temperley)</p>
+              <a href="https://goo.gl/maps/Nx2jrgujAEBxQPWN9" class="link-light" target="_blank">Ver mapa</a>
               </div>`}
         this.http.post('https://cepeac.up.railway.app/envio', param).subscribe(resp => { });
         console.log('esta es la data de id: ' + data.id)
-        // this.ruta.navigate(['teatrointimo/end/' + data.id])
+        this.ruta.navigate(['variete/end/' + data.id])
         this.cargando.cargo();
       }).catch(error => {
         this.toast.incorrect('', 'Reserva No Realizada')
